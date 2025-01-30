@@ -1,0 +1,35 @@
+Tema 2 sda
+// -----------------------------------------------------------------------------
+    Cerinta 1
+Provocarea a constat in creearea arborelui quad iar restul era destul de simplu.
+Am luat un struct node in care tineam toate informatiile nodului necesare, am 
+lua si size ca ma ajuta la implementare sa retin cel mai mare bloc nedivizat.
+Initial eu faceam nod si pentru cazul in care era mai mic sau egal decat 
+pragul si asta a insemnat multe complicatii. Dupa mi-am dat seama de pe 
+exemplu ca trebuia sa adaug nod in arbore doar in cazul in care depasea pragul.
+Inaltimea arborelui o calculez cu o functie recursiva basic.
+Blocul cel mai mare nedivizat il obtin folosindu-ma de type si parcurgerea pe 
+nivel. Practic imediat ce gasesc blocul de type 0, dau break si returnez aceea 
+valoare.
+La fel si nr de blocuri nedivizibile le-am rezolvat foloind parcurgere pe nivel
+si mereu cand gaseam un bloc de type 1 adunam. Puteam sa fac si recursiv in 
+adancime dar cred ca e mai eficient iterativ.
+// -----------------------------------------------------------------------------
+    Cerinta 2
+Acest ex a fost usor ca trebuia sa scriu sizeul si dupa sa fac parcurgere pe 
+nivel si in functie de type scriam informatiile. Nimic mai mult.
+// -----------------------------------------------------------------------------
+    Cerinta 3
+M-am chinuit foarte mult pe acest exercitiu pentru ca initial m-am gandit sa-l 
+fac astfel: Sa adaug in coada orice nod oi citi din firul comprimat, fie de tip
+0 sau 1 iar dupa sa fac cu o functie recursiva care se apela de 4 ori... mda. 
+Cred ca se intelege de la sine de ce n-a mers. Dupa am incercat sa fac sa adaug
+doar nodurile interne in coada insa dupa mi-am facut griji de cum se vor face 
+conexiunile dintre nodurile arborelui asa ca ma gandisem sa mai iau un parametru
+nivel si poate folosind acela o sa gasesc in arbore nodul si dupa voi adauga 
+dupa. Recunosc nu sunt cele mai bune metode dar le-am scris aici ca sa retin ce 
+greseli sa nu mai fac. Dupa mi-am dat seama ca eu lucrez cu adrese si puteam sa
+fac conexiuniile pe parcurs ce citesc din fisier. Daca era de tip 0 il bagam in
+queue daca nu doar faceam conexiunea. N-aveam de ce sa-mi fac griji ca o sa 
+citesc mai multe informatii datorita formatului.
+
